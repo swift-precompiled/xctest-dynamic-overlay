@@ -32,8 +32,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "IssueReporting",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-4d19a05e644db695492f031852ed829423804faf323f5a882063811f7fe93426.xcframework.zip",
-            checksum: "4d19a05e644db695492f031852ed829423804faf323f5a882063811f7fe93426"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0-precompiled.1/IssueReporting-5e44c7ac03d26132f97eff09a426358eebd305ce0bb62815251dfe988bc5a87c.xcframework.zip",
+            checksum: "5e44c7ac03d26132f97eff09a426358eebd305ce0bb62815251dfe988bc5a87c"
         ),
         .target(
             name: "IssueReportingTestSupport_Aggregation",
@@ -41,8 +41,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "IssueReportingTestSupport",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-8de2e713ba6f1a8ee058c47a8b3588547dca7aeff6bfbf8ae48e1096d9fac54e.xcframework.zip",
-            checksum: "8de2e713ba6f1a8ee058c47a8b3588547dca7aeff6bfbf8ae48e1096d9fac54e"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0-precompiled.1/IssueReportingTestSupport-4a26614e25d870de2c7c271d407f00a8438e9c0a299c19e1d7e0f2dc7926470f.xcframework.zip",
+            checksum: "4a26614e25d870de2c7c271d407f00a8438e9c0a299c19e1d7e0f2dc7926470f"
         ),
         .target(
             name: "XCTestDynamicOverlay_Aggregation",
@@ -50,8 +50,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "XCTestDynamicOverlay",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-a167e7ff2e4ad04cda5ed70f97bcd7dfebe4718e7b05b12fd5e071e95016fafa.xcframework.zip",
-            checksum: "a167e7ff2e4ad04cda5ed70f97bcd7dfebe4718e7b05b12fd5e071e95016fafa"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0-precompiled.1/XCTestDynamicOverlay-469a95160cbaae02ae1a8a8b1b26e602f170e775fceae20bfa8721a3e635f3e1.xcframework.zip",
+            checksum: "469a95160cbaae02ae1a8a8b1b26e602f170e775fceae20bfa8721a3e635f3e1"
         )
     ]
 )

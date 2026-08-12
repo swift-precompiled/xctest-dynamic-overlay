@@ -14,44 +14,59 @@ let package = Package(
     products: [
         .library(
             name: "IssueReporting",
-            targets: ["IssueReporting_Aggregation"]
+            targets: ["IssueReporting_PrecompiledProduct"]
         ),
         .library(
             name: "IssueReportingTestSupport",
-            targets: ["IssueReportingTestSupport_Aggregation"]
+            targets: ["IssueReportingTestSupport_PrecompiledProduct"]
         ),
         .library(
             name: "XCTestDynamicOverlay",
-            targets: ["XCTestDynamicOverlay_Aggregation"]
+            targets: ["XCTestDynamicOverlay_PrecompiledProduct"]
         )
     ],
     targets: [
         .target(
             name: "IssueReporting_Aggregation",
-            dependencies: ["IssueReporting"]
+            dependencies: ["IssueReporting"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "IssueReporting",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-dba07bfcc6d7bf8c89e99ac9461939473fe3eacbd04bb620206fec323536a29c.xcframework.zip",
-            checksum: "dba07bfcc6d7bf8c89e99ac9461939473fe3eacbd04bb620206fec323536a29c"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-9d238f4764d30a62f353cfef37f3b0cf51ddb26d67dbcddc5e846c6b82866271.xcframework.zip",
+            checksum: "9d238f4764d30a62f353cfef37f3b0cf51ddb26d67dbcddc5e846c6b82866271"
         ),
         .target(
             name: "IssueReportingTestSupport_Aggregation",
-            dependencies: ["IssueReportingTestSupport"]
+            dependencies: ["IssueReportingTestSupport"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "IssueReportingTestSupport",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-4cdda19d00cb1cc6842384c170187a594f6e2a61981fc5a7c0f992ce53f4563d.xcframework.zip",
-            checksum: "4cdda19d00cb1cc6842384c170187a594f6e2a61981fc5a7c0f992ce53f4563d"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-34c2351c3b2b43d4d9bff13357daf6ecdcc0edab1875bddfbe3659065819d37e.xcframework.zip",
+            checksum: "34c2351c3b2b43d4d9bff13357daf6ecdcc0edab1875bddfbe3659065819d37e"
         ),
         .target(
             name: "XCTestDynamicOverlay_Aggregation",
-            dependencies: ["XCTestDynamicOverlay", "IssueReporting_Aggregation"]
+            dependencies: ["XCTestDynamicOverlay"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "XCTestDynamicOverlay",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-4071ce36ddef444a7bb0a7b79b650aa2a85c010a5af9871974d6beb20f1bb4a4.xcframework.zip",
-            checksum: "4071ce36ddef444a7bb0a7b79b650aa2a85c010a5af9871974d6beb20f1bb4a4"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-c450077c1e3e2cea84572d30f8cb30218001de30c872282f4074b937d2966dcd.xcframework.zip",
+            checksum: "c450077c1e3e2cea84572d30f8cb30218001de30c872282f4074b937d2966dcd"
+        ),
+        .target(
+            name: "IssueReporting_PrecompiledProduct",
+            dependencies: ["IssueReporting_Aggregation"]
+        ),
+        .target(
+            name: "IssueReportingTestSupport_PrecompiledProduct",
+            dependencies: ["IssueReportingTestSupport_Aggregation"]
+        ),
+        .target(
+            name: "XCTestDynamicOverlay_PrecompiledProduct",
+            dependencies: ["XCTestDynamicOverlay_Aggregation", "IssueReporting_Aggregation"]
         )
     ]
 )

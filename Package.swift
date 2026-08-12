@@ -33,36 +33,40 @@ let package = Package(
         .target(
             name: "IssueReporting_Aggregation",
             dependencies: ["IssueReporting"],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "IssueReporting",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-cfcc46d1e3a798a3b1691950b6145849b26f845a56d940fb6628ec558607e2ab.xcframework.zip",
-            checksum: "cfcc46d1e3a798a3b1691950b6145849b26f845a56d940fb6628ec558607e2ab"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-779d8ccc6d90d35c761e96629e58f9687fbe2201ced8c25484d8d8d81d074b99.xcframework.zip",
+            checksum: "779d8ccc6d90d35c761e96629e58f9687fbe2201ced8c25484d8d8d81d074b99"
         ),
         .target(
             name: "IssueReportingTestSupport_Aggregation",
             dependencies: ["IssueReportingTestSupport"],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "IssueReportingTestSupport",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-da1ea1670ab3ea37e87f756b9d45eb2f859cd73a9b853d3f5185cbee6b1c2a24.xcframework.zip",
-            checksum: "da1ea1670ab3ea37e87f756b9d45eb2f859cd73a9b853d3f5185cbee6b1c2a24"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-e5ee2d54c9d0e69118d2cc9ab11834e67eb9ca9017c8bf918447e1ba7c0e5ef6.xcframework.zip",
+            checksum: "e5ee2d54c9d0e69118d2cc9ab11834e67eb9ca9017c8bf918447e1ba7c0e5ef6"
         ),
         .target(
             name: "XCTestDynamicOverlay_Aggregation",
             dependencies: ["XCTestDynamicOverlay"],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "XCTestDynamicOverlay",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-dbf70639e3bc365f2cbc90685e58f10528768986b913f8dcce2bb692b7645970.xcframework.zip",
-            checksum: "dbf70639e3bc365f2cbc90685e58f10528768986b913f8dcce2bb692b7645970"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-fdddffe5bc87b952a229189d694ea593159e794dd508bd46b551b55451aa20de.xcframework.zip",
+            checksum: "fdddffe5bc87b952a229189d694ea593159e794dd508bd46b551b55451aa20de"
         ),
         .target(
             name: "XCTestDynamicOverlay_PrecompiledProduct",
-            dependencies: ["XCTestDynamicOverlay_Aggregation", "IssueReporting_Aggregation"]
+            dependencies: ["XCTestDynamicOverlay_Aggregation", "IssueReporting_Aggregation"],
+            packageAccess: false
         )
     ]
 )

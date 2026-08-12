@@ -14,15 +14,19 @@ let package = Package(
     products: [
         .library(
             name: "IssueReporting",
-            targets: ["IssueReporting_PrecompiledProduct"]
+            targets: ["IssueReporting"]
         ),
         .library(
             name: "IssueReportingTestSupport",
-            targets: ["IssueReportingTestSupport_PrecompiledProduct"]
+            targets: ["IssueReportingTestSupport"]
         ),
         .library(
             name: "XCTestDynamicOverlay",
-            targets: ["XCTestDynamicOverlay_PrecompiledProduct"]
+            targets: [
+                "XCTestDynamicOverlay",
+                "IssueReporting",
+                "XCTestDynamicOverlay_PrecompiledProduct"
+            ]
         )
     ],
     targets: [
@@ -33,8 +37,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "IssueReporting",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-9d238f4764d30a62f353cfef37f3b0cf51ddb26d67dbcddc5e846c6b82866271.xcframework.zip",
-            checksum: "9d238f4764d30a62f353cfef37f3b0cf51ddb26d67dbcddc5e846c6b82866271"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReporting-cfcc46d1e3a798a3b1691950b6145849b26f845a56d940fb6628ec558607e2ab.xcframework.zip",
+            checksum: "cfcc46d1e3a798a3b1691950b6145849b26f845a56d940fb6628ec558607e2ab"
         ),
         .target(
             name: "IssueReportingTestSupport_Aggregation",
@@ -43,8 +47,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "IssueReportingTestSupport",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-34c2351c3b2b43d4d9bff13357daf6ecdcc0edab1875bddfbe3659065819d37e.xcframework.zip",
-            checksum: "34c2351c3b2b43d4d9bff13357daf6ecdcc0edab1875bddfbe3659065819d37e"
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/IssueReportingTestSupport-da1ea1670ab3ea37e87f756b9d45eb2f859cd73a9b853d3f5185cbee6b1c2a24.xcframework.zip",
+            checksum: "da1ea1670ab3ea37e87f756b9d45eb2f859cd73a9b853d3f5185cbee6b1c2a24"
         ),
         .target(
             name: "XCTestDynamicOverlay_Aggregation",
@@ -53,16 +57,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "XCTestDynamicOverlay",
-            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-c450077c1e3e2cea84572d30f8cb30218001de30c872282f4074b937d2966dcd.xcframework.zip",
-            checksum: "c450077c1e3e2cea84572d30f8cb30218001de30c872282f4074b937d2966dcd"
-        ),
-        .target(
-            name: "IssueReporting_PrecompiledProduct",
-            dependencies: ["IssueReporting_Aggregation"]
-        ),
-        .target(
-            name: "IssueReportingTestSupport_PrecompiledProduct",
-            dependencies: ["IssueReportingTestSupport_Aggregation"]
+            url: "https://github.com/swift-precompiled/xctest-dynamic-overlay/releases/download/1.11.0/XCTestDynamicOverlay-dbf70639e3bc365f2cbc90685e58f10528768986b913f8dcce2bb692b7645970.xcframework.zip",
+            checksum: "dbf70639e3bc365f2cbc90685e58f10528768986b913f8dcce2bb692b7645970"
         ),
         .target(
             name: "XCTestDynamicOverlay_PrecompiledProduct",
